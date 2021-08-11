@@ -1,11 +1,11 @@
 
 
-from typing_extensions import Final
+
 import torch
 
 import torch.nn as nn
 import torch.nn.functional as F
-import torch.optim as optim
+
 
 class ConvBlock(nn.Module):
     def __init__(self,dim1,dim2,kernel_size=3,stride=1,pad=0):
@@ -85,6 +85,4 @@ class FinalModel(nn.Module):
         
 input=torch.rand(2,3,224,224)
 net=FinalModel()
-from torchsummary import summary
-summary(net,(3,224,224))
 
